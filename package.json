@@ -1,0 +1,26 @@
+{
+  "name": "discorddate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "morgdates.js",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "devbuild": "webpack --mode development",
+    "build": "webpack --mode production",
+    "postbuild": "mkdir -p site; while read -r l; do if [[ \"${l}\" =~ '/* index.css */' ]]; then cat src/index.css; elif [[ \"${l}\" =~ '<!-- main.js -->' ]]; then cat dist/main.js; else echo \"${l}\"; fi ; done < src/index.html >site/discordDate.html"
+  },
+  "author": "",
+  "dependencies": {
+    "compromise-dates": "^3.6.0",
+    "remove-files-webpack-plugin": "1.5.0",
+    "virtual-module-webpack-plugin": "0.4.1",
+    "webpack": "5.93.0",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "5.0.4",
+    "webpack-virtual-modules": "0.6.2"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 0.25%, not dead"
+  ]
+}

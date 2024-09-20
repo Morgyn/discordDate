@@ -1,0 +1,121 @@
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+.title {
+    font-size: 1.8rem;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.input-container {    
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.material-input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    transition: border-bottom-color 0.3s ease;
+    display: flex
+}
+
+.material-input:focus {
+    border-bottom-color: #2196F3;
+}
+
+.syntax-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.syntax-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+}
+
+.syntax-item .result {
+    font-size: 1rem;
+    color: #666;
+    text-align: left;
+    flex: 1;
+}
+
+.right-align {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.material-icons {
+    color: #2196F3;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.material-icons:hover {
+    color: #1976D2;
+}
+
+code, .syntax-code {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+code:hover, .syntax-code:hover {
+    background-color: #e3f2fd;
+}
+
+code:after {
+  content: "📋";
+  background-color: #0000;
+  margin-left: 5px;
+}
+
+.preview-text {
+    width: 100%;
+    display: block;
+    text-align: right;
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 5px;
+}
